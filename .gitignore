@@ -1,0 +1,3 @@
+#this will ignore the packages imported by webpack node modules
+
+/node_modules/
