@@ -43,24 +43,44 @@ table {
 }
 
 /* every thing above is for resetting the default browser styling*/
+@font-face {
+	font-family: 'Roboto';
+	src: url('./fonts/robotomono-variablefont_wght-webfont.woff2') format('woff2'), url('./fonts/robotomono-variablefont_wght-webfont.woff') format('woff');
+}
 
 body{
 	height: 100%;
 	width: 100%;
 	background-color: agua;
+	font-family: 'Roboto';
 }
 #content{
 	display:grid;
-	grid-template: 1fr 8fr/ 1fr 6fr;
+	grid-template: 1fr 40fr/ 1fr 5fr;
 	background-color: aqua;
 }
 
 .header{
 	grid-area: 1 / 1 / 2 / 3;
 	display: flex;
-	flex-direction: row;
+	justify-content: space-between;
+	justify-items: center;
+	align-items: center;
 	border: solid 2px black;
+	position: sticky;
+	top: 0px;
+	background-color: whitesmoke;
 
+}
+.siteNameCont{
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.siteIcon{
+	max-width: 6rem;
+	height:3rem;
 }
 
 .navbar{
@@ -68,6 +88,8 @@ body{
 	display: flex;
 	flex-direction: column;
 	border: solid 2px black;
+	position: sticky;
+	top: 20px;
 }
 .visualContent{
 	grid-area: 2 / 2 / 3 / 3;
@@ -77,6 +99,25 @@ body{
 	font-family: "sans-serif";
 	font-size: 2rem;
 	color: brown;
+}
+.menu{
+	display: grid;
+	grid-template: 1fr / 1fr 1fr;
+	background-color:antiquewhite;
+	border: solid 2px black;
+
+}
+.left{
+	grid-area: 1 / 1 / 2 / 2;
+	border: solid 2px black;
+}
+.right{
+	grid-area: 1 / 2 / 2 / 3;
+	border: solid 2px black;
+}
+.mImg{
+	width:80%;
+	height: auto;
 }
 	
 

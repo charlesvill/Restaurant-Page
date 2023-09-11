@@ -1,6 +1,6 @@
 import laImage from './images/lincolnheights.jpg';
 import tacoImage from './images/birria.jpg';
-import siteIcon from './images/taco.png';
+import siteIcon from './images/moustache.png';
 
 function loadPage(){
     const parentdiv = document.querySelector("#content");
@@ -8,33 +8,36 @@ function loadPage(){
     const navbar = document.createElement('div'); 
     navbar.className = "navbar";
     parentdiv.appendChild(navbar);
-    navbar.innerHTML = `
-    <button>Menu</button>
-    <button>Locations</button>
-    <button>Nutrition</button>
-    <button>Giftcards</button>`;
+    navbar.innerHTML = 
+    `
+    <button class="tab tmenu">Menu</button>
+    <button class="tab locations">Locations</button>
+    <button class="tab nutrition">Nutrition</button>
+    <button class="tab contact">Contact</button>
+    `;
 
     const header = document.createElement('div');
     header.className = "header";
     parentdiv.appendChild(header);
 
+    const sitenameCont = document.createElement('div');
+    sitenameCont.className = 'siteNameCont';
+    header.appendChild(sitenameCont);
+
     const name = document.createElement('h2');
     name.className = "name";
     name.textContent = "TACOS EL GUAPO";
-    header.appendChild(name);
+    sitenameCont.appendChild(name);
 
     const icon = new Image();
     icon.src = siteIcon;
     icon.className = "siteIcon";
-    header.appendChild(icon);
+    sitenameCont.appendChild(icon);
 
     const orderbtn = document.createElement('button');
     orderbtn.className = "orderBtn";
     orderbtn.textContent = "Order now";
     header.appendChild(orderbtn);
-
-    
-
 
     const visualcont = document.createElement('div');
     visualcont.className = "visualContainer";
