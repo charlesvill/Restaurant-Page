@@ -11,7 +11,7 @@ buttons.forEach(btn => btn.addEventListener("click", (event)=>{
     contentContainer.innerHTML = ``;
     switch(tab)
     {
-        case "menu" : 
+        case "tmenu" : 
         //trigger the module for menu
         loadMenu();
         break;

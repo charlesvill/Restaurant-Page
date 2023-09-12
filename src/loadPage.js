@@ -1,24 +1,25 @@
+import banner from './images/tacosbannerfixed.jpg';
 import laImage from './images/lincolnheights.jpg';
 import tacoImage from './images/birria.jpg';
 import siteIcon from './images/moustache.png';
 
-function loadPage(){
-    const parentdiv = document.querySelector("#content");
-
+function createUI(parentCont){
     const navbar = document.createElement('div'); 
     navbar.className = "navbar";
-    parentdiv.appendChild(navbar);
+    parentCont.appendChild(navbar);
     navbar.innerHTML = 
     `
-    <button class="tab tmenu">Menu</button>
-    <button class="tab locations">Locations</button>
-    <button class="tab nutrition">Nutrition</button>
-    <button class="tab contact">Contact</button>
+    
+        <button class="tab tmenu">Menu</button>
+        <button class="tab locations">Locations</button>
+        <button class="tab nutrition">Nutrition</button>
+        <button class="tab contact">Contact</button>
+    
     `;
 
     const header = document.createElement('div');
     header.className = "header";
-    parentdiv.appendChild(header);
+    parentCont.appendChild(header);
 
     const sitenameCont = document.createElement('div');
     sitenameCont.className = 'siteNameCont';
@@ -39,12 +40,27 @@ function loadPage(){
     orderbtn.textContent = "Order now";
     header.appendChild(orderbtn);
 
+}
+
+function generateHome(parentCont){
     const visualcont = document.createElement('div');
     visualcont.className = "visualContainer";
-    parentdiv.appendChild(visualcont);
+    parentCont.appendChild(visualcont);
 
-    visualcont.innerHTML = 
-    `<p class="text">The best tacos in town!</p>`;
+    const bannerCont = document.createElement('div');
+    bannerCont.className = "bannerCont";
+    visualcont.appendChild(bannerCont);
+    
+    const bannerImg = new Image();
+    bannerImg.className = "bannerImg"; 
+    bannerImg.src = banner;
+    bannerCont.appendChild(bannerImg);
+
+    const bannertxt = document.createElement('p');
+    bannertxt.className = 'bannerTxt';
+    bannertxt.textContent = "Taste the Difference!";
+    bannerCont.appendChild(bannertxt);
+
 
     const aboutCont = document.createElement('div');
     aboutCont.className = "aboutCont";
@@ -52,11 +68,12 @@ function loadPage(){
     <p>Our goal was simple: bring a piece of that 'casera' experience
     eating street tacos on the neighborhood corner of your grandmas house.
     handmade tortillas with locally sourced maiz and organic grassfed meat
-    for that real 'just like home' experience.</p>`
+    for that real 'just like home' flavor.</p>`;
+    visualcont.appendChild(aboutCont);
 
     const b_groundIMG = new Image();
     b_groundIMG.src = tacoImage;
-    b_groundIMG.className= "tacosImage"
+    b_groundIMG.className= "tacosImg"
     visualcont.appendChild(b_groundIMG);
 
     const storyCont = document.createElement('div');
@@ -71,6 +88,15 @@ function loadPage(){
     story_img.src = laImage;
     story_img.className = "storyImg";
     visualcont.appendChild(story_img);
+}
+
+function loadPage(){
+    
+    const parentdiv = document.querySelector(".content");
+
+    createUI(parentdiv);
+    generateHome(parentdiv);
+    
 }
 
 
