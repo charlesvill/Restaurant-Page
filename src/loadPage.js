@@ -11,9 +11,9 @@ function createUI(parentCont){
     `
     
         <button class="tab tmenu">Menu</button>
-        <button class="tab locations">Locations</button>
-        <button class="tab nutrition">Nutrition</button>
-        <button class="tab contact">Contact</button>
+        <button class="tab tlocations">Locations</button>
+        <button class="tab tnutrition">Nutrition</button>
+        <button class="tab tcontact">Contact</button>
     
     `;
 
@@ -42,10 +42,8 @@ function createUI(parentCont){
 
 }
 
-function generateHome(parentCont){
-    const visualcont = document.createElement('div');
-    visualcont.className = "visualContainer";
-    parentCont.appendChild(visualcont);
+function generateHome(visualcont){
+    
 
     const bannerCont = document.createElement('div');
     bannerCont.className = "bannerCont";
@@ -100,9 +98,13 @@ function generateHome(parentCont){
 function loadPage(){
     
     const parentdiv = document.querySelector(".content");
-
     createUI(parentdiv);
-    generateHome(parentdiv);
+
+    const visualcont = document.createElement('div');
+    visualcont.className = "visualContainer";
+    parentdiv.appendChild(visualcont);
+
+    generateHome(visualcont);
     
 }
 

@@ -1,18 +1,20 @@
 import { loadPage } from "./loadPage.js";
-// import { generateHome } from "./loadPage.js"; this is a little borked at the moment
+import { generateHome } from "./loadPage.js";
 import loadMenu from "./menu.js";
+import createLocations from "./locations.js";
 import './style.css';
 
 
 loadPage();
 const homeContainer = document.querySelector(".visualContainer");
-// const contentContainer = document.querySelector(".content"); this is broken atm
+const contentContainer = document.querySelector(".content");
 
 const homeBtn = document.querySelector('.siteNameCont');
 homeBtn.addEventListener("click",()=>{
-    // homeContainer.innerHTML = ``;
-    // generateHome(contentContainer);this is a little broken at the moment
-    location.reload();
+    homeContainer.innerHTML = ``;
+    homeContainer.classList.remove(homeContainer.classList[1]);
+    
+    generateHome(homeContainer);
 })
 
 
@@ -20,20 +22,25 @@ const buttons = document.querySelectorAll(".tab");
 buttons.forEach(btn => btn.addEventListener("click", (event)=>{
     const tab = event.target.classList[1];
     homeContainer.innerHTML = ``;
+    homeContainer.classList.remove(homeContainer.classList[1]);
+
     switch(tab)
     {
         case "tmenu" : 
-        //trigger the module for menu
+        homeContainer.classList.add("menu");
         loadMenu();
         break;
-        case "locations" : 
-        //trigger the module for location tab
+        case "tlocations" : 
+        createLocations();
+        homeContainer.classList.add("locations");
         break;
-        case "nutrition" : 
+        case "tnutrition" : 
         //trigger the module for nutrition tab
+        homeContainer.classList.add("nutrition");
         break;
-        case "contact" : 
+        case "tcontact" : 
         //trigger the module for contact form
+        homeContainer.classList.add("contact");
         break;
         default: console.log("something went wrong with the tab selector");
     }

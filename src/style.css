@@ -218,8 +218,12 @@ body{
 	border: solid 2px black;
 }
 .mImg{
-	width:80%;
-	height: auto;
+	width:80%; 
+}
+.card{
+	margin-left: 5vw;
+	margin-right: 5vw;
+	background-color:#ecd5bb;
 }
 	
 

@@ -99,7 +99,6 @@ function populateR(parentCont){
 function loadMenu(){
     //start instantiating the 
     const contentCont = document.querySelector(".visualContainer");
-    contentCont.classList.add("menu");
     
     const rightside = document.createElement('div');
     rightside.className = 'right';
