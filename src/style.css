@@ -89,6 +89,7 @@ body{
 	font-family: inherit;
 	font-weight: bold;
 	color:#fff
+	
 }
 .header > button:hover{
 	background-color: #fff;
@@ -153,6 +154,9 @@ body{
 	margin-top: 5rem;
 	
 }
+.tacosImg{
+	margin-top: 0;
+}
 .bannerCont{
 	position:relative;
 }
@@ -172,6 +176,31 @@ body{
 	width: 2rem;
 	height: auto;
 	text-align: center;
+}
+.featuredBox{
+	position: relative;
+	margin-top: 20vh;
+}
+.aboutCont, .storyCont{
+	max-width: 35%;
+	padding: 3vw;
+	background-color:#ecd5bbee;
+	position:absolute;
+	z-index: 50;
+	left: 5vw;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+.storyImg{
+	margin-bottom: 20vh;
+}
+.featTitle{
+	font-weight: bold;
+	font-size: 2vw;
+	margin-bottom: 2vw;
+}
+.featText{
+	line-height: 1.3rem;
 }
 .menu{
 	display: grid;

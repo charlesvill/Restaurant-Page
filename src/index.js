@@ -1,14 +1,25 @@
-import loadPage from "./loadPage.js";
+import { loadPage } from "./loadPage.js";
+// import { generateHome } from "./loadPage.js"; this is a little borked at the moment
 import loadMenu from "./menu.js";
 import './style.css';
 
 
 loadPage();
-const contentContainer = document.querySelector(".visualContainer");
+const homeContainer = document.querySelector(".visualContainer");
+// const contentContainer = document.querySelector(".content"); this is broken atm
+
+const homeBtn = document.querySelector('.siteNameCont');
+homeBtn.addEventListener("click",()=>{
+    // homeContainer.innerHTML = ``;
+    // generateHome(contentContainer);this is a little broken at the moment
+    location.reload();
+})
+
+
 const buttons = document.querySelectorAll(".tab");
 buttons.forEach(btn => btn.addEventListener("click", (event)=>{
     const tab = event.target.classList[1];
-    contentContainer.innerHTML = ``;
+    homeContainer.innerHTML = ``;
     switch(tab)
     {
         case "tmenu" : 

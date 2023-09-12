@@ -61,33 +61,40 @@ function generateHome(parentCont){
     bannertxt.textContent = "Taste the Difference!";
     bannerCont.appendChild(bannertxt);
 
+    const aboutBox = document.createElement('div');
+    aboutBox.className = "featuredBox";
+    visualcont.appendChild(aboutBox);
 
     const aboutCont = document.createElement('div');
     aboutCont.className = "aboutCont";
-    aboutCont.innerHTML = `<p>About us</p>
-    <p>Our goal was simple: bring a piece of that 'casera' experience
+    aboutCont.innerHTML = `<p class= "featTitle">About us</p>
+    <p class= "featText">Our goal was simple: 
+    bring a piece of that 'casera' experience
     eating street tacos on the neighborhood corner of your grandmas house.
     handmade tortillas with locally sourced maiz and organic grassfed meat
     for that real 'just like home' flavor.</p>`;
-    visualcont.appendChild(aboutCont);
+    aboutBox.appendChild(aboutCont);
 
     const b_groundIMG = new Image();
     b_groundIMG.src = tacoImage;
     b_groundIMG.className= "tacosImg"
-    visualcont.appendChild(b_groundIMG);
+    aboutBox.appendChild(b_groundIMG);
+
+    const storyBox = document.createElement('div');
+    storyBox.className = "featuredBox";
+    visualcont.appendChild(storyBox);
 
     const storyCont = document.createElement('div');
     storyCont.className = "storyCont";
-    visualcont.appendChild(storyCont);
+    storyBox.appendChild(storyCont);
     storyCont.innerHTML = `
-    <p>Our Story</p>
-    <p>Our roots come from beautiful Lincoln Heights here in Los Angeles. We've locally owned and operated since 1998 and have since expanded with three food trucks in the greater L.A. area.</p>
+    <p class= "featTitle">Our Story</p>
+    <p class= "featText">Our roots come from beautiful Lincoln Heights here in Los Angeles. We've locally owned and operated since 1998 and have since expanded with three food trucks in the greater L.A. area.</p>
     `
-
     const story_img = new Image();
     story_img.src = laImage;
     story_img.className = "storyImg";
-    visualcont.appendChild(story_img);
+    storyBox.appendChild(story_img);
 }
 
 function loadPage(){
@@ -100,4 +107,4 @@ function loadPage(){
 }
 
 
-export default loadPage;
+export { loadPage, generateHome };

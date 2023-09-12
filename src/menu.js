@@ -78,7 +78,7 @@ function populateR(parentCont){
     desHeader.className = "mtitle";
     parentCont.appendChild(desHeader);
 
-    const flan = createMenuItem("Flan", "Rich delicant homemade flan. Need we say more?", 5.00, parentCont);
+    const flan = createMenuItem("Flan", "Rich decadent homemade flan. Need we say more?", 5.00, parentCont);
     parentCont.appendChild(flan);
 
     const bunIMG = new Image();
