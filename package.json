@@ -8,6 +8,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open"
+    "rootghpg" : "git subtree push --prefix dist origin gh-pages"
   },
   "author": "",
   "license": "ISC",
