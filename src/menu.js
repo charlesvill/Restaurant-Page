@@ -9,7 +9,7 @@ function createMenuItem(name, description, price, parentCont){
     menuItem.innerHTML = `
     <h4>${name}</h4>
     <p>
-    ${description}<span> - $${price}</span>
+    ${description}<span>$${price}</span>
     </p>
     `
     parentCont.appendChild(menuItem);
@@ -101,11 +101,11 @@ function loadMenu(){
     const contentCont = document.querySelector(".visualContainer");
     
     const rightside = document.createElement('div');
-    rightside.className = 'right';
+    rightside.className = 'right mside';
     contentCont.appendChild(rightside);
 
     const leftside = document.createElement('div');
-    leftside.className = 'left';
+    leftside.className = 'left mside';
     contentCont.appendChild(leftside);
 
     populateR(rightside);

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="mainlocCont">
+        <h2 class="mainTitle"></h2>
+        <div class="mainCard">
+            <p class="address one">1345 Washington Blvd</p>
+            <p class="address two">Los Angeles, CA 90021</p>
+            <p class="phone">(323) 223-2233</p>
+        </div>
+    </div>
+
+    <div class="satlocCont">
+        <h3 class="truckTitle">Food Trucks</h3>
+        <div class="truck">
+            <span class="truckName"></span>
+            <span class="truckInfo">
+                <p></p>
+                <p></p>
+                <p></p>
+            </span>
+        </div>
+        <div class="truck">
+            <span class="truckName"></span>
+            <span class="truckInfo">
+                <p></p>
+                <p></p>
+                <p></p>
+            </span>
+        </div>
+        <div class="truck">
+            <span class="truckName"></span>
+            <span class="truckInfo">
+                <p></p>
+                <p></p>
+                <p></p>
+            </span>
+        </div>
+    </div>
+
+
+
+    <h2 class="nutritionTable">Nutrition Facts</h2>
+
+    <table>
+        <colgroup>
+            <col>
+            <col>
+            <col style="border-style: solid; border-color: black; border-width: 2px;">
+        </colgroup>
+        <thead>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+                <th scope="col">calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="6">Tacos</th>
+                <td>Quesabirria</td>
+                <td>130</td>
+            </tr>
+            <tr>
+                <td>Al Pastor</td>
+                <td>110</td>
+            </tr>
+            <tr>
+                <td>Asada</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Suadero</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Migas</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Gringa</td>
+                <td>100-120</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Salads</th>
+                <td>Nopale</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Campeche</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Spring</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Desserts</th>
+                <td>Flan</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Bunuelos</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>Mexian Tiramisu</td>
+                <td>200</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <form class="form">
+        <fieldset class="contactDetails">
+            <div class="solicitor sName">
+                <legend>Contact Details</legend>
+                <label for="fname">First Name</label>
+                <input type="text" name="fName" id="name" required>
+                <label for="lname">Last Name</label>
+                <input type="text" name="lName" id="lname">
+            </div>
+            <div class="solicitor CInfo">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"required>
+                <label for="phonenum">Phone Number</label>
+                <input type="number" name="phone" id="phonenum" minlength="10" maxlength="13" required>
+            </div>
+            <label for="message">Comments</label>
+            <textarea name="msg" id="message" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Event info</legend>
+            <label for="eventSize">Group Size</label>
+            <select name="sizeDropdown" id="eventSize">
+                <option selected>None</option>
+                <option>20-30</option>
+                <option>30-50</option>
+                <option>50-70</option>
+            </select>
+            <label for="date">Event Date</label>
+            <input type="datetime-local" name="date" id="date">
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+</html>

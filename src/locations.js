@@ -17,7 +17,7 @@ export default function createLocations(){
     mainLocCard.innerHTML = 
     `
     <div class="mainlocCont">
-        <h2 class="mainTitle">Main Restuarant</h2>
+        <h4 class="mainTitle">Main Restuarant</h4>
         <div class="mainCard">
             <p class="address one">1345 Washington Blvd</p>
             <p class="address two">Los Angeles, CA 90021</p>
@@ -38,29 +38,29 @@ export default function createLocations(){
     satelliteLocCard.innerHTML = 
     `
     <div class="satlocCont">
-        <h3 class="truckTitle">Food Trucks</h3>
+        <h4 class="truckTitle">Food Trucks</h4>
         <div class="truck">
-            <span class="truckName"></span>
+            <span class="truckName">Alhambra</span>
             <span class="truckInfo">
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>134 Lincoln Way</p>
+                <p>Los Angeles, CA 90345</p>
+                <p>(213) 354-5666</p>
             </span>
         </div>
         <div class="truck">
-            <span class="truckName"></span>
+            <span class="truckName">Culver City</span>
             <span class="truckInfo">
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>3456 La Quinta Dr.</p>
+                <p>Los Angeles, CA 90054</p>
+                <p>(310) 123-9876</p>
             </span>
         </div>
         <div class="truck">
-            <span class="truckName"></span>
+            <span class="truckName">Los Feliz</span>
             <span class="truckInfo">
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>5934 Griffith ln.</p>
+                <p>Los Angeles, CA 90031</p>
+                <p>(213) 980-0084</p>
             </span>
         </div>
     </div>

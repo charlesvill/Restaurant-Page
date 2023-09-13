@@ -2,6 +2,8 @@ import { loadPage } from "./loadPage.js";
 import { generateHome } from "./loadPage.js";
 import loadMenu from "./menu.js";
 import createLocations from "./locations.js";
+import createNutrition from "./nutrition.js";
+import createContact from "./contact.js";
 import './style.css';
 
 
@@ -31,16 +33,18 @@ buttons.forEach(btn => btn.addEventListener("click", (event)=>{
         loadMenu();
         break;
         case "tlocations" : 
-        createLocations();
         homeContainer.classList.add("locations");
+        createLocations();
         break;
         case "tnutrition" : 
         //trigger the module for nutrition tab
         homeContainer.classList.add("nutrition");
+        createNutrition();
         break;
         case "tcontact" : 
         //trigger the module for contact form
         homeContainer.classList.add("contact");
+        createContact();
         break;
         default: console.log("something went wrong with the tab selector");
     }

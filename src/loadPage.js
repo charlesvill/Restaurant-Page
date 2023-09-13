@@ -25,7 +25,7 @@ function createUI(parentCont){
     sitenameCont.className = 'siteNameCont';
     header.appendChild(sitenameCont);
 
-    const name = document.createElement('h2');
+    const name = document.createElement('p');
     name.className = "name";
     name.textContent = "TACOS EL GUAPO";
     sitenameCont.appendChild(name);
